@@ -1,3 +1,11 @@
 .color-navbar {
   background-color: red;
 }
+
+.flexcenter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+}

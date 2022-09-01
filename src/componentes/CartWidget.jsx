@@ -1,7 +1,7 @@
 import React from "react";
 import cart from "./images/cart4.svg";
 
-const Carrito = () => {
+const CartWidget = () => {
   return (
     <p className="text-center mt-4">
       <img src={cart} alt="" width="38" />
@@ -9,4 +9,4 @@ const Carrito = () => {
   );
 };
 
-export default Carrito;
+export default CartWidget;

@@ -1,5 +1,5 @@
 import React from "react";
-import Carrito from "./CartWidget";
+import CartWidget from "./CartWidget";
 
 import logo from "./images/logo.png";
 
@@ -42,7 +42,7 @@ const NavBar = () => {
             </nav>
           </div>
           <div className="col-md-1">
-            <Carrito />
+            <CartWidget />
           </div>
         </div>
       </div>
