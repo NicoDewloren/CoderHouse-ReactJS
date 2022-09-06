@@ -6,7 +6,7 @@ const ItemCount = (props) => {
   const [stock, setStock] = useState(props.stock);
 
   function aumentar() {
-    if (count < props.stock) {
+    if (count < stock) {
       setCount(count + 1);
     }
   }
@@ -17,7 +17,7 @@ const ItemCount = (props) => {
     }
   }
 
-  function stockDisponible() {
+  function onAdd() {
     if (count <= stock) {
       setStock(stock - count);
     }
@@ -36,10 +36,12 @@ const ItemCount = (props) => {
           <input
             className="btn btn-primary mt-2"
             value="Agregar al Carrito"
-            onClick={stockDisponible}
+            onClick={onAdd}
           />
         </p>
-        <p className="text-center">El stock disponible es: {stock} unidades</p>
+        <p className="text-center">
+          El stock <b>disponible</b> es: {stock} unidades
+        </p>
       </div>
     </div>
   );
