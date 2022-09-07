@@ -29,7 +29,7 @@ const ItemCount = (props) => {
         <h5 className="text-center">Contador</h5>
         <div className="flexcenter ">
           <button onClick={disminuir}>-</button>
-          <input type="text" value={count} />
+          <p> {count} </p>
           <button onClick={aumentar}>+</button>
         </div>
         <p className="text-center">

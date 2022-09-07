@@ -11,7 +11,7 @@ const Item = ({ info }) => {
         <div className="card-body">
           <h5 className="card-title">{titulo}</h5>
           <p className="card-text">${precio}</p>
-          <input className="btn btn-primary" value="Agregar al carrito" />
+          <button className="btn btn-primary">Agregar al carrito</button>
         </div>
       </div>
     </div>
