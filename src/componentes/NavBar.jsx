@@ -1,7 +1,7 @@
 import React from "react";
 import CartWidget from "./CartWidget";
-
 import logo from "./images/logo.png";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -30,12 +30,15 @@ const NavBar = () => {
                   id="navbarNavAltMarkup"
                 >
                   <div className="navbar-nav">
-                    <a className="nav-link" aria-current="page">
+                    <NavLink className="nav-link" to="/">
                       Inicio
-                    </a>
-                    <a className="nav-link">Productos</a>
-                    <a className="nav-link">Nosotros</a>
-                    <a className="nav-link">Contacto</a>
+                    </NavLink>
+                    <NavLink className="nav-link" to="/category/pecheras">
+                      Pecheras
+                    </NavLink>
+                    <NavLink className="nav-link" to="category/correas">
+                      Correas
+                    </NavLink>
                   </div>
                 </div>
               </div>

@@ -3,10 +3,9 @@ import { useState } from "react";
 
 const ItemCount = (props) => {
   const [count, setCount] = useState(props.initial);
-  const [stock, setStock] = useState(props.stock);
 
   function aumentar() {
-    if (count < stock) {
+    if (count < props.stock) {
       setCount(count + 1);
     }
   }
@@ -18,16 +17,15 @@ const ItemCount = (props) => {
   }
 
   function onAdd() {
-    if (count <= stock) {
-      setStock(stock - count);
+    if (count <= props.stock) {
+      props.stock -= props.stock - count;
     }
   }
 
   return (
     <div className="card ">
       <div className="card-body">
-        <h5 className="text-center">Contador</h5>
-        <div className="flexcenter ">
+        <div className="flexcenter">
           <button onClick={disminuir}>-</button>
           <p> {count} </p>
           <button onClick={aumentar}>+</button>
@@ -38,7 +36,7 @@ const ItemCount = (props) => {
           </button>
         </p>
         <p className="text-center">
-          El stock <b>disponible</b> es: {stock} unidades
+          El stock <b>disponible</b> es: {props.stock} unidades
         </p>
       </div>
     </div>

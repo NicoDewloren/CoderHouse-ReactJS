@@ -1,17 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Item = ({ info }) => {
-  const { titulo, precio, imagen } = info;
-  const src = require(`${imagen}`);
-
   return (
     <div className="col-md-4 mt-4">
       <div className="card">
-        <img src={src} className="card-img-top" alt={titulo} />
+        <Link to={`/product/${info.id}`}>
+          <img src={info.imagen} className="card-img-top" alt={info.titulo} />
+        </Link>
         <div className="card-body">
-          <h5 className="card-title">{titulo}</h5>
-          <p className="card-text">${precio}</p>
-          <button className="btn btn-primary">Agregar al carrito</button>
+          <h5 className="card-title">{info.titulo}</h5>
+          <p className="card-text">${info.precio}</p>
+          <Link to={`/product/${info.id}`}>
+            <button className="btn btn-primary">Ver mas</button>
+          </Link>
         </div>
       </div>
     </div>
