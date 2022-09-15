@@ -16,12 +16,6 @@ const ItemCount = (props) => {
     }
   }
 
-  function onAdd() {
-    if (count <= props.stock) {
-      props.stock -= props.stock - count;
-    }
-  }
-
   return (
     <div className="card ">
       <div className="card-body">
@@ -31,7 +25,7 @@ const ItemCount = (props) => {
           <button onClick={aumentar}>+</button>
         </div>
         <p className="text-center">
-          <button className="btn btn-primary mt-2" onClick={onAdd}>
+          <button className="btn btn-primary mt-2" onClick={props.onAdd}>
             Agregar al carrito
           </button>
         </p>
