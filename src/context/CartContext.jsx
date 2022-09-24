@@ -36,8 +36,33 @@ const CartProvider = ({ children }) => {
     console.log(newCart);
   };
 
+  const totalPrice = () => {
+    return cart.reduce(
+      (acumulador, producto) =>
+        acumulador + producto.quantity * producto.precio,
+      0
+    );
+  };
+
+  const totalProducts = () => {
+    return cart.reduce(
+      (acumulador, productoActual) => acumulador + productoActual.quantity,
+      0
+    );
+  };
+
   return (
-    <CartContext.Provider value={{ clearCart, isInCart, removeItem, addItem }}>
+    <CartContext.Provider
+      value={{
+        clearCart,
+        isInCart,
+        removeItem,
+        addItem,
+        totalPrice,
+        totalProducts,
+        cart,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );
