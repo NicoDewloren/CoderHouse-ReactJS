@@ -11,9 +11,8 @@ const NavBar = () => {
           <div className="col-md-11">
             <nav className="navbar navbar-expand-lg container">
               <div className="container-fluid">
-                <a className="navbar-brand">
-                  <img src={logo} width="86" />
-                </a>
+                <img src={logo} width="86" alt="Logo" />
+
                 <button
                   className="navbar-toggler"
                   type="button"

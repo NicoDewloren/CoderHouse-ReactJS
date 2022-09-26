@@ -10,7 +10,7 @@ const CartWidget = () => {
     <NavLink to="/cart">
       <p className="text-center mt-4">
         <img src={cart} alt="" width="38" />
-        <span class="badge rounded-pill text-bg-success">
+        <span className="badge rounded-pill text-bg-success">
           {totalProducts() || ""}
         </span>
       </p>
