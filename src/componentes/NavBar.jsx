@@ -2,8 +2,11 @@ import React from "react";
 import CartWidget from "./CartWidget";
 import logo from "./images/logo.png";
 import { NavLink } from "react-router-dom";
+import { useCartContext } from "../context/CartContext";
 
 const NavBar = () => {
+  const { cart } = useCartContext();
+
   return (
     <div className="color-navbar container-fluid">
       <div className="container">
@@ -43,9 +46,11 @@ const NavBar = () => {
               </div>
             </nav>
           </div>
-          <div className="col-md-1">
-            <CartWidget />
-          </div>
+          {cart.length === 0 ? null : (
+            <div className="col-md-1">
+              <CartWidget />
+            </div>
+          )}
         </div>
       </div>
     </div>
