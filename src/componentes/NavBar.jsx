@@ -46,11 +46,9 @@ const NavBar = () => {
               </div>
             </nav>
           </div>
-          {cart.length === 0 ? null : (
-            <div className="col-md-1">
-              <CartWidget />
-            </div>
-          )}
+          <div className="col-md-1">
+            {cart.length === 0 ? null : <CartWidget />}
+          </div>
         </div>
       </div>
     </div>
