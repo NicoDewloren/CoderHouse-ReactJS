@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useCartContext } from "../context/CartContext";
 import CartItem from "./CartItem";
 import Form from "./Form";
+import { Link } from "react-router-dom";
 
 const Checkout = () => {
   const { cart, totalPrice } = useCartContext();
@@ -12,6 +13,15 @@ const Checkout = () => {
   const handleId = (numeroDeOrden) => {
     setOrderId(numeroDeOrden);
   };
+
+  if (cart.length === 0) {
+    return (
+      <div>
+        <h1>No tienes productos</h1>
+        <Link to="/"> Ir al home</Link>
+      </div>
+    );
+  }
 
   if (orderId) {
     return (
