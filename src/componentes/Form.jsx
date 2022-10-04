@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useCartContext } from "../context/CartContext";
 import { getFirestore } from "firebase/firestore";
 
-const Form = () => {
+const Form = ({ handleId }) => {
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [direccion, setDireccion] = useState("");
@@ -19,13 +19,13 @@ const Form = () => {
       buyer: { nombre, telefono, email, direccion },
       cart: cart,
       date: serverTimestamp(),
-      total: totalPrice,
+      total: totalPrice(),
     };
     const db = getFirestore();
     const refOrden = collection(db, "orders");
-    // addDoc(refOrden, orden);
-
-    console.log(orden);
+    addDoc(refOrden, orden).then((res) => {
+      handleId(res.id);
+    });
   };
   const handleNombre = (e) => {
     setNombre(e.target.value);
