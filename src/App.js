@@ -5,6 +5,7 @@ import NavBar from "./componentes/NavBar";
 import Cart from "./componentes/Cart";
 import CartProvider from './context/CartContext';
 import Checkout from './componentes/Checkout';
+import Footer from './componentes/Footer';
 
 
 
@@ -25,7 +26,9 @@ function App() {
             <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </CartProvider>
+        <Footer />
       </BrowserRouter>
+
     </>
   );
 }

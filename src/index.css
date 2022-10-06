@@ -1,5 +1,5 @@
 .color-navbar {
-  background-color: red;
+  background-color: aqua;
 }
 
 .flexcenter {
@@ -17,4 +17,45 @@
 
 .card-product {
   width: 25rem;
+  border: 12px double #50ffac;
+  box-shadow: -3px -2px 42px 8px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: -3px -2px 42px 8px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: -3px -2px 42px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-product:hover {
+  background-color: rgb(186, 236, 220);
+}
+
+.footer-img {
+  width: 35px;
+  margin-left: 1rem;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+body {
+  font-family: Karla;
+  font-size: 1.5rem;
+  min-height: 100vh;
+  position: relative;
+}
+
+footer {
+  margin-top: 3rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.nav-link {
+  border-radius: 25px;
+  margin-left: 2rem;
+}
+.nav-link:hover {
+  background-color: #50ffac;
+  border-radius: 25px;
 }
