@@ -59,3 +59,26 @@ footer {
   background-color: #50ffac;
   border-radius: 25px;
 }
+
+.item-detail__title {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.item-count {
+  border-radius: 26px 26px 26px 26px;
+  -webkit-border-radius: 26px 26px 26px 26px;
+  -moz-border-radius: 26px 26px 26px 26px;
+  border: 20px dashed #35e89c;
+}
+
+.item-count__text {
+  font-size: 1rem;
+}
+
+.item-count__inputs {
+  background-color: rgb(72, 247, 124);
+  margin: 0 0.5rem;
+  border-radius: 25px;
+  padding: 0 1.5rem;
+}

@@ -17,12 +17,16 @@ const ItemCount = (props) => {
   }
 
   return (
-    <div className="card ">
+    <div className="card item-count">
       <div className="card-body">
         <div className="flexcenter">
-          <button onClick={disminuir}>-</button>
+          <button className="item-count__inputs" onClick={disminuir}>
+            <b>-</b>
+          </button>
           <p> {count} </p>
-          <button onClick={aumentar}>+</button>
+          <button className="item-count__inputs" onClick={aumentar}>
+            <b>+</b>
+          </button>
         </div>
         <p className="text-center">
           <button
@@ -32,7 +36,7 @@ const ItemCount = (props) => {
             Agregar al carrito
           </button>
         </p>
-        <p className="text-center">
+        <p className="text-center item-count__text">
           El stock <b>disponible</b> es: {props.stock} unidades
         </p>
       </div>
