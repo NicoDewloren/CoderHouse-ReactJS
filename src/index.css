@@ -18,13 +18,13 @@
 .card-product {
   width: 25rem;
   border: 12px double #50ffac;
-  box-shadow: -3px -2px 42px 8px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: -3px -2px 42px 8px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: -3px -2px 42px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-product:hover {
   background-color: rgb(186, 236, 220);
+  box-shadow: -3px -2px 42px 8px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: -3px -2px 42px 8px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: -3px -2px 42px 8px rgba(0, 0, 0, 0.1);
 }
 
 .footer-img {
@@ -63,6 +63,17 @@ footer {
 .item-detail__title {
   font-size: 3rem;
   text-transform: uppercase;
+}
+.item-detail__img {
+  width: 90%;
+  height: 80%;
+}
+.item-detail__img:hover {
+  width: 90%;
+  height: 80%;
+  box-shadow: -3px -2px 42px 8px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: -3px -2px 42px 8px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: -3px -2px 42px 8px rgba(0, 0, 0, 0.1);
 }
 
 .item-count {

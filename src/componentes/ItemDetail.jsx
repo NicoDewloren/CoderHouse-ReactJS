@@ -18,7 +18,11 @@ const ItemDetail = ({ item }) => {
     <div className="container mt-5">
       <div className="row">
         <div className="col-md-6">
-          <img src={item.imagen} alt={item.titulo} className="img-fluid" />
+          <img
+            src={item.imagen}
+            alt={item.titulo}
+            className="img-fluid item-detail__img"
+          />
         </div>
         <div className="col-md-6">
           <h2 className="text-center item-detail__title">{item.titulo}</h2>
