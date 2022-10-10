@@ -16,9 +16,13 @@ const Checkout = () => {
 
   if (cart.length === 0) {
     return (
-      <div>
-        <h1>No tienes productos</h1>
-        <Link to="/"> Ir al home</Link>
+      <div className="container mt-5">
+        <div className="col-md-12">
+          <h1 className="text-center">No tenes ningun producto</h1>
+          <Link to="/">
+            <button className="btn btn-primary">Ir al home</button>
+          </Link>
+        </div>
       </div>
     );
   }
@@ -27,10 +31,12 @@ const Checkout = () => {
     return (
       <div className="container">
         <div className="row">
-          <h1 className="text-center">Gracias por tu compra! </h1>
-          <h3 className="text-center mt-3">
-            Te dejamos el codigo de seguimiento : {orderId}
-          </h3>
+          <div className="col-md-12">
+            <h1 className="text-center">Gracias por tu compra! </h1>
+            <h3 className="text-center mt-3">
+              Te dejamos el codigo de seguimiento : {orderId}
+            </h3>
+          </div>
         </div>
       </div>
     );
